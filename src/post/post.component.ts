@@ -6,6 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./post.component.scss'],
 })
 export class PostComponent {
-  title: string = 'Hovhannes';
+  title: string = 'Guest';
   age: number = 26;
+
+  constructor() {
+    setTimeout(() => {
+      this.title = 'Hovhannes';
+    }, 5000);
+  }
 }
