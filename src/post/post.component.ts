@@ -11,6 +11,7 @@ export class PostComponent {
   age: number = 26;
   counter = 0;
   counterTypes = counterTypes;
+  toggle = false;
 
   constructor() {
     setTimeout(() => {

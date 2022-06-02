@@ -6,4 +6,12 @@
   <button (click)="getCount(counterTypes.INCREMENT)">Increment</button>
   <button (click)="getCount(counterTypes.DECREMENT)">Decrement</button>
   <p>{{ counter }}</p>
+
+  <button (click)="toggle = !toggle">Toggle</button>
+
+  <p *ngIf="toggle; else nonToggled">toggled</p>
+
+  <ng-template #nonToggled>
+    <p>non toggled</p>
+  </ng-template>
 </div>
