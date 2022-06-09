@@ -3,5 +3,10 @@
 
   <app-post-form (onAdd)="addPost($event)"></app-post-form>
   <hr />
-  <app-post *ngFor="let p of posts" [post]="p"></app-post>
+  <app-post *ngFor="let p of posts" [post]="p">
+    <small *ngIf="p.text.length < 10; else longest">Post is short</small>
+    <ng-template #longest>
+      <small>Post is long</small>
+    </ng-template>
+  </app-post>
 </div>
