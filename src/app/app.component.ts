@@ -7,9 +7,9 @@ import { IPost } from 'src/types/post.types';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  posts: IPost[] = [
-    { id: 1, title: 'Title 1', text: 'Text 1' },
-    { id: 2, title: 'Title 2', text: 'Text 2' },
-    { id: 3, title: 'Title 3', text: 'Text 3' },
-  ];
+  posts: IPost[] = [];
+
+  addPost(post: IPost) {
+    this.posts.unshift(post);
+  }
 }
